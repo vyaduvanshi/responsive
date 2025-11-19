@@ -1,6 +1,5 @@
 import json
 import logging
-import uuid
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, delete
 

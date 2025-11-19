@@ -34,7 +34,7 @@ class LLMService:
     
     #Stream LLM response token by token
     async def chat_stream(self, prompt: str):
-        async with self.http_client.stream("POST", "http://localhost:11434/api/generate",
+        async with self.http_client.stream("POST", "http://ollama:11434/api/generate",
                                            json={"model": self.llm_model, "prompt": prompt, "stream": True}) as response:
             async for line in response.aiter_lines():
                 if line.strip():
@@ -47,7 +47,7 @@ class LLMService:
 
     #Non-streaming response (for summarization)
     async def chat(self, prompt: str):
-        response = await self.http_client.post("http://localhost:11434/api/generate",
+        response = await self.http_client.post("http://ollama:11434/api/generate",
                                                json={"model": self.llm_model, "prompt": prompt, "stream": False})
         return response.json()["response"]
     

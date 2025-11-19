@@ -2,7 +2,8 @@ import asyncio
 import websockets
 
 async def stream_chat(session_id: str, message: str):
-    uri = f"ws://localhost:8000/chat/ws/{session_id}"
+    # uri = f"ws://localhost:8000/chat/ws/{session_id}"
+    uri = f"ws://backend:8000/chat/ws/{session_id}"
     
     async with websockets.connect(uri) as ws:
         await ws.send(message)

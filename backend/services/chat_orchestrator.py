@@ -1,11 +1,11 @@
 import logging
 import numpy as np
 from typing import List
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.vectordb import vectordb
 from services.memory_service import memory_service
 from services.llm_service import llm_service
-from sqlalchemy.ext.asyncio import AsyncSession
 from utils.prompt_utils import load_prompt
 from utils.tokenizer import estimate_tokens
 
