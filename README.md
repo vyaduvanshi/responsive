@@ -10,8 +10,10 @@
 4. Wait for all libraries, models, etc to download. Might take a few minutes.
 5. Once the image is built and the container is running, wait for Ollama to finish pulling.
 6. Once it's ready, feel free to access the following URLs-
-    i. Streamlit UI → http://localhost:8501
-    ii. FastAPI backend → http://localhost:8000
+
+    i) Streamlit UI → http://localhost:8501
+
+    ii) FastAPI backend → http://localhost:8000
 
 <br>
 
